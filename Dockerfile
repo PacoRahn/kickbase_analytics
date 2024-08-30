@@ -1,18 +1,23 @@
 # Use Node.js 18 base image
 FROM node:18
 
-# Create and set the working directory
+# Set working directory
 WORKDIR /usr/src/app
 
-# Copy package.json and install dependencies
+# Install nodemon globally
+RUN npm install -g nodemon
+
+# Copy package.json and package-lock.json
 COPY package*.json ./
+
+# Install dependencies
 RUN npm install
 
-# Copy all project files
+# Copy application code
 COPY . .
 
-# Expose port 3000 for the application
+# Expose port
 EXPOSE 3000
 
-# Command to start the application
-CMD ["node", "index.js"]
+# Start application with nodemon
+CMD ["nodemon", "index.js"]
