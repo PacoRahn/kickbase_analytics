@@ -396,3 +396,21 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# JS specifics
+node_modules
+npm-debug.log
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+# Python virtual environments
+venv/
+# HFS+ attributes
+*.DS_Store
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
