@@ -414,3 +414,6 @@ venv/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Docker specific files
+.dockerignore
