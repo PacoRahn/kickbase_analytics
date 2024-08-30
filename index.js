@@ -6,7 +6,7 @@ const app = express();
 const fetchData = async () => {
   try {
     const [kickbaseResponse, catResponse, jsonPlaceholderResponse] = await Promise.all([
-      axios.get('https://api.kickbase.com'), // Adjust with real endpoint
+      axios.get('https://api.kickbase.com/competition/teams/14/players'), // Adjust with real endpoint
       axios.get('https://catfact.ninja/fact'),
       axios.get('https://jsonplaceholder.typicode.com/posts/1')
     ]);
