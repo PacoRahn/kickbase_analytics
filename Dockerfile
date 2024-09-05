@@ -20,4 +20,4 @@ COPY . .
 EXPOSE 3000
 
 # Start application with nodemon
-CMD ["nodemon", "index.js"]
+CMD ["nodemon", "-L", "--watch", ".", "--ext", "js", "index.js"]
